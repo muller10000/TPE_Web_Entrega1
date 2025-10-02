@@ -1,37 +1,41 @@
-Trabajo Práctico 1 / Programación Web
+# Trabajo Práctico 1 / Programación Web
 
 Realizado por **Matias Muller**
 
-# Dominio de la aplicación
+## Dominio de la aplicación
 
-El dominio elegido es una **Lista de peliculas favoritas**
-Cada pelicula cuenta con los siguientes atributos:
+El dominio elegido es un **Catálogo de Películas Favoritas**.  
+Cada película cuenta con los siguientes atributos:
 
-- Título
-- Descripción
-- Estado (Visto, Pendiente, Favorita)
+- **Título**  
+- **Descripción**  
+- **Estado**: `Vista`, `Pendiente` o `Favorita`  
+- **Imagen**: portada o captura representativa de la película  
 
-# Estructura
+La página muestra además un resumen estadístico de todas las películas: total, vistas, pendientes y favoritas.
 
-    Peliculas(Entrega1)/
-     ├── index.html           # Esqueleto de la pagina
-     ├── main.go              # Servidor principal
-     └── static/
-         └── estilos.css      # Estilos
+---
 
-# Requisitos previos
+## Estructura del proyecto
 
-- [Go](https://go.dev/) 1.22 o superior   
+Peliculas(Entrega1)/
+ ├── index.html           # Esqueleto de la página web
+ ├── main.go              # Servidor principal en Go
+ └── static/
+     ├── estilos.css      # Estilos
+     └── images/          # Imágenes de cada película en formato JPG
 
+## Requisitos previos
 
-# Ejecución
+Go
+ 1.22 o superior
+
+## Ejecución
 
 1) Clonar este repositorio o descargar los archivos.
 
 2) Ejecutar el servidor en Go:
+  - cd Peliculas(Entrega1)
+  - go run main.go
 
-   - En consola:
-     cd Peliculas(Entrega1)
-     go run main.go
-
-3) Abrir en el navegador: [http://localhost:8080](http://localhost:8080) - Página de presentación
+Abrir en el navegador: http://localhost:8080
