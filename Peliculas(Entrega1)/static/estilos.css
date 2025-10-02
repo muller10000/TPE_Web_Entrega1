@@ -1,6 +1,6 @@
 body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #fce4ec, #f8bbd0); /* fondo rosita pastel */
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* azul suave */
     min-height: 100vh;
     color: #333;
     line-height: 1.6;
@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     background: #fff;
     border-radius: 20px;
@@ -17,8 +17,8 @@ body {
 }
 
 h1 {
-    color: #ad1457; /* rosa fuerte */
-    font-size: 2.2rem;
+    color: #01579b; /* azul fuerte */
+    font-size: 2.4rem;
     font-weight: 700;
     margin-bottom: 20px;
     text-align: center;
@@ -28,22 +28,22 @@ h1 {
 h1::after {
     content: '';
     display: block;
-    width: 80px;
-    height: 3px;
-    background: #ec407a; /* fucsia vibrante */
-    margin: 8px auto 0;
+    width: 100px;
+    height: 4px;
+    background: #ff9800; /* naranja vibrante */
+    margin: 10px auto 0;
     border-radius: 2px;
 }
 
 .description {
     font-size: 1rem;
-    color: #555;
+    color: #444;
     text-align: center;
     margin-bottom: 30px;
     padding: 15px;
-    background: #fce4ec;
+    background: #e1f5fe; /* azul muy claro */
     border-radius: 8px;
-    border-left: 4px solid #ec407a; /* rayo lateral */
+    border-left: 4px solid #ff9800; /* detalle naranja */
 }
 
 /* Estadísticas */
@@ -56,30 +56,37 @@ h1::after {
 
 .stats p {
     flex: 1;
-    background: #f8bbd0; /* rosa pastel */
+    background: #bbdefb; /* azul pastel */
     padding: 15px;
     border-radius: 12px;
     font-weight: 600;
-    color: #333;
+    color: #01579b;
     text-align: center;
 }
 
-/* Tareas */
-.task {
-    background: #f8d1e3; /* rosa pastel distinto para cajas */
+/* Contenedor de películas */
+.films {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* dos columnas */
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Cada película */
+.film {
+    background: #e3f2fd; /* azul claro */
     border-radius: 12px;
     padding: 20px;
-    margin-bottom: 20px;
-    border-left: 4px solid #ec407a; /* rayo lateral */
+    border-left: 4px solid #ff9800; /* línea naranja */
     transform: scale(0.95);
     opacity: 0;
     animation: zoomIn 0.5s forwards;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.task:hover {
+.film:hover {
     transform: scale(1.02);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 @keyframes zoomIn {
@@ -93,14 +100,14 @@ h1::after {
     }
 }
 
-.task h3 {
-    color: #444;
-    font-size: 1.2rem;
-    font-weight: 600;
+.film h3 {
+    color: #0d47a1; /* azul más oscuro */
+    font-size: 1.3rem;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
-.task p {
+.film p {
     color: #555;
     margin-bottom: 6px;
 }
@@ -110,23 +117,24 @@ h1::after {
     display: inline-block;
     padding: 6px 14px;
     border-radius: 14px;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-.status.completada {
+/* Personalización de estados */
+.status.Vista {
     background: #c8e6c9;
     color: #2e7d32;
 }
 
-.status.pendiente {
-    background: #fff3cd;
-    color: #856404;
+.status.Pendiente {
+    background: #ffe0b2;
+    color: #e65100;
 }
 
-.status.comenzada {
-    background: #ff4fa1;
+.status.Favorita {
+    background: #ff9800;
     color: #fff;
 }

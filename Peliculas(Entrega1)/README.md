@@ -7,14 +7,13 @@ Realizado por **Matias Muller**
 El dominio elegido es una **Lista de peliculas favoritas**
 Cada pelicula cuenta con los siguientes atributos:
 
--   `id` → identificador único
--   `title` → título de la tarea
--   `description` → descripción de la tarea
--   `completed` → estado de la tarea (pendiente o completada)
+- Título
+- Descripción
+- Estado (Visto, Pendiente, Favorita)
 
 # Estructura
 
-    Peliculas/
+    Peliculas(Entrega1)/
      ├── index.html           # Esqueleto de la pagina
      ├── main.go              # Servidor principal
      └── static/
@@ -32,7 +31,7 @@ Cada pelicula cuenta con los siguientes atributos:
 2) Ejecutar el servidor en Go:
 
    - En consola:
-     cd Peliculas(Entrega 1)
+     cd Peliculas(Entrega1)
      go run main.go
 
 3) Abrir en el navegador: [http://localhost:8080](http://localhost:8080) - Página de presentación

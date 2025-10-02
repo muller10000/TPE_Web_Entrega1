@@ -3,48 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Catálogo de Películas Favoritas</title>
+    <title>Mis Películas Favoritas</title>
     <link rel="stylesheet" href="/static/estilos.css">
 </head>
 <body>
     <div class="container">
-        <h1>Mi Lista de Tareas</h1>
+        <h1>Mi Catálogo de Películas Favoritas</h1>
         
         <p class="description">
-            Una aplicación web simple para gestionar tareas diarias. Cada tarea incluye un título descriptivo, una descripción detallada y un estado que indica si está pendiente o completada.
+            Una aplicación web simple para organizar mis películas favoritas. Cada película incluye un título, una descripción breve y un estado que indica si ya la vi o es pendiente.
         </p>
 
         <div class="stats">
-            <p>Total de tareas: 4</p>
-            <p>Tareas pendientes: 2</p>
-            <p>Tareas completadas: 1</p>
-            <p>Tareas comenzadas: 1</p>
-            
+            <p>Total de películas: 4</p>
+            <p>Vistas: 2</p>
+            <p>Pendientes: 1</p>
+            <p>Favoritas: 1</p>
         </div>
 
-        <div class="task">
-            <h3>Configurar servidor web</h3>
-            <p><strong>Descripción:</strong> Implementar el servidor HTTP básico en Go para servir archivos estáticos</p>
-            <p><strong>Estado:</strong> <span class="status completada">Completada</span></p>
-        </div>
+       <div class="films">
+           <div class="film">
+               <h3>Inception</h3>
+               <p><strong>Descripción:</strong> Entrar y salir de los sueños podría ser extraordinario, aunque peligroso</p>
+               <p><strong>Estado:</strong> <span class="status Vista">Vista</span></p>
+           </div>
 
-        <div class="task">
-            <h3>Implementar formularios HTML</h3>
-            <p><strong>Descripción:</strong> Crear formularios para el manejo de datos con métodos GET y POST</p>
-            <p><strong>Estado:</strong> <span class="status pendiente">Pendiente</span></p>
-        </div>
+           <div class="film">
+               <h3>Amelie</h3>
+               <p><strong>Descripción:</strong> En los detalles está lo mágico, lo cotidiano es único al mismo tiempo</p>
+               <p><strong>Estado:</strong> <span class="status Favorita">Favorita</span></p>
+           </div>
 
-        <div class="task">
-            <h3>Agregar estilos CSS</h3>
-            <p><strong>Descripción:</strong> Mejorar la apariencia visual de la aplicación con estilos CSS básicos</p>
-            <p><strong>Estado:</strong> <span class="status pendiente">Pendiente</span></p>
-        </div>
+           <div class="film">
+               <h3>Django Sin Cadenas</h3>
+               <p><strong>Descripción:</strong> Un clásico Western con tintes de venganza y persecución, obra maestra de Tarantino</p>
+               <p><strong>Estado:</strong> <span class="status Vista">Vista</span></p>
+           </div>
 
-        <div class="task">
-            <h3>Hacer informe TPE Web</h3>
-            <p><strong>Descripción:</strong> Especificar cada implementacion para abordar cada inciso</p>
-            <p><strong>Estado:</strong> <span class="status comenzada">Comenzada</span></p>
-        </div>
+           <div class="film">
+               <h3>Star Wars</h3>
+               <p><strong>Descripción:</strong> Guerras interespaciales y peleas emblemáticas</p>
+               <p><strong>Estado:</strong> <span class="status Pendiente">Pendiente</span></p>
+           </div>
+       </div>
     </div>
 </body>
 </html>
