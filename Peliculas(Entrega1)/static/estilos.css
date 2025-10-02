@@ -1,0 +1,132 @@
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #fce4ec, #f8bbd0); /* fondo rosita pastel */
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+    color: #ad1457; /* rosa fuerte */
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #ec407a; /* fucsia vibrante */
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.description {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #fce4ec;
+    border-radius: 8px;
+    border-left: 4px solid #ec407a; /* rayo lateral */
+}
+
+/* Estadísticas */
+.stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.stats p {
+    flex: 1;
+    background: #f8bbd0; /* rosa pastel */
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+/* Tareas */
+.task {
+    background: #f8d1e3; /* rosa pastel distinto para cajas */
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #ec407a; /* rayo lateral */
+    transform: scale(0.95);
+    opacity: 0;
+    animation: zoomIn 0.5s forwards;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.task h3 {
+    color: #444;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.task p {
+    color: #555;
+    margin-bottom: 6px;
+}
+
+/* Estados */
+.status {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 14px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status.completada {
+    background: #c8e6c9;
+    color: #2e7d32;
+}
+
+.status.pendiente {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status.comenzada {
+    background: #ff4fa1;
+    color: #fff;
+}
