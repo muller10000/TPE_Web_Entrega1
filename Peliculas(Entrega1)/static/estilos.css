@@ -1,8 +1,8 @@
 body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* azul suave */
+    background: linear-gradient(135deg, #0d1b2a, #1b263b); /* azul oscuro degradado */
     min-height: 100vh;
-    color: #333;
+    color: #eee;
     line-height: 1.6;
     padding: 20px 0;
 }
@@ -10,14 +10,14 @@ body {
 .container {
     max-width: 900px;
     margin: 0 auto;
-    background: #fff;
+    background: #1b263b; /* fondo más oscuro */
     border-radius: 20px;
     padding: 40px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
-    color: #01579b; /* azul fuerte */
+    color: #e65100; /* naranja fuerte */
     font-size: 2.4rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -30,38 +30,40 @@ h1::after {
     display: block;
     width: 100px;
     height: 4px;
-    background: #ff9800; /* naranja vibrante */
+    background: #ff8f00; /* naranja vibrante */
     margin: 10px auto 0;
     border-radius: 2px;
 }
 
 .description {
     font-size: 1rem;
-    color: #444;
+    color: #ccc;
     text-align: center;
     margin-bottom: 30px;
     padding: 15px;
-    background: #e1f5fe; /* azul muy claro */
+    background: #0f1c2f; /* azul muy oscuro */
     border-radius: 8px;
-    border-left: 4px solid #ff9800; /* detalle naranja */
+    border-left: 4px solid #ff8f00; /* detalle naranja */
 }
 
-/* Estadísticas */
+/* Estadísticas agrupadas */
 .stats {
     display: flex;
-    gap: 15px;
+    flex-direction: column; /* apila verticalmente */
+    gap: 10px;              /* espacio entre líneas */
     margin-bottom: 30px;
-    flex-wrap: wrap;
+    background: #162a45;    /* fondo oscuro para todo el bloque */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    color: #ff8f00;         /* color del texto naranja */
+    font-weight: 600;
+    text-align: center;
 }
 
 .stats p {
-    flex: 1;
-    background: #bbdefb; /* azul pastel */
-    padding: 15px;
-    border-radius: 12px;
-    font-weight: 600;
-    color: #01579b;
-    text-align: center;
+    margin: 0;  /* quitar margen individual */
+    padding: 5px 0;
 }
 
 /* Contenedor de películas */
@@ -74,19 +76,19 @@ h1::after {
 
 /* Cada película */
 .film {
-    background: #e3f2fd; /* azul claro */
+    background: #0f1c2f; /* azul oscuro */
     border-radius: 12px;
     padding: 20px;
-    border-left: 4px solid #ff9800; /* línea naranja */
+    border-left: 4px solid #ff8f00; /* línea naranja */
     transform: scale(0.95);
     opacity: 0;
     animation: zoomIn 0.5s forwards;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .film:hover {
     transform: scale(1.02);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 
 @keyframes zoomIn {
@@ -101,14 +103,14 @@ h1::after {
 }
 
 .film h3 {
-    color: #0d47a1; /* azul más oscuro */
+    color: #64b5f6; /* azul claro para destacar título */
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .film p {
-    color: #555;
+    color: #ccc;
     margin-bottom: 6px;
 }
 
@@ -125,16 +127,31 @@ h1::after {
 
 /* Personalización de estados */
 .status.Vista {
-    background: #c8e6c9;
-    color: #2e7d32;
+    background: #1de9b6; /* verde aqua brillante */
+    color: #0d1b2a;
 }
 
 .status.Pendiente {
-    background: #ffe0b2;
-    color: #e65100;
+    background: #ffab40; /* naranja marcado */
+    color: #1b263b;
 }
 
 .status.Favorita {
-    background: #ff9800;
+    background: #ff6d00; /* naranja fuerte */
     color: #fff;
+}
+
+/* Imágenes de cada película */
+.film-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.2s ease;
+}
+
+.film-img:hover {
+    transform: scale(1.03);
 }
